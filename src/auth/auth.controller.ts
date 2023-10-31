@@ -1,8 +1,7 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Request, UnauthorizedException } from '@nestjs/common';
-import { userInfo } from 'os';
+import { Controller, Get, Post, Body, UseGuards, Request } from '@nestjs/common';
 
 import { AuthService } from './auth.service';
-import { CreateUserDto, LoginDto, RegisterUserDto, UpdateUserDto } from './dto';
+import { CreateUserDto, LoginDto, RegisterUserDto } from './dto';
 import { User } from './entities/user.entity';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginResponse } from './interfaces/login.payload';
